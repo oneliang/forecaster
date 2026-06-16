@@ -1,0 +1,10 @@
+server:
+  port: 8484
+  cors_origin: http://localhost:8400
+
+storage:
+  data_dir: ./data
+
+log:
+  level: info
+  file: logs/server.log

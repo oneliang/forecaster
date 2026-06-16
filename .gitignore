@@ -1,0 +1,11 @@
+bin/
+logs/
+data/
+frontend/node_modules/
+frontend/dist/
+*.exe
+.DS_Store
+
+backend/data
+backend/logs
+docs

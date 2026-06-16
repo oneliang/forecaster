@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — indigo/purple */
+  --color-primary: #667eea;
+  --color-primary-dark: #764ba2;
+  --color-primary-light: #e8eaf6;
+  --color-primary-hover: #c5cae9;
+  --color-primary-bg: #eef2ff;
+
+  /* Status */
+  --color-success: #4caf50;
+  --color-success-light: #e8f5e9;
+  --color-warning: #ffc107;
+  --color-warning-light: #fff8e1;
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+  --color-info: #2196f3;
+  --color-info-light: #e3f2fd;
+
+  /* Surface & text */
+  --color-surface: #f5f7fa;
+  --color-border: #e8eaf6;
+  --color-border-hover: #c5cae9;
+  --color-text-primary: #333;
+  --color-text-body: #555;
+  --color-text-muted: #666;
+  --color-text-light: #999;
+}
+
+/* Brand gradient utility */
+.bg-brand-gradient {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scoped transition — only on interactive elements */
+button, a, input, select, [role="button"] {
+  transition-property: background-color, border-color, color, box-shadow, opacity, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Thin scrollbar — indigo-tinted */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5cae9;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9fa8da;
+}
+
+/* Toast animations */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes fadeOutRight {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+/* Modal animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes scaleOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
