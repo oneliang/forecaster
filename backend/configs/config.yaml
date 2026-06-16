@@ -1,6 +1,6 @@
 server:
   port: 8484
-  cors_origin: http://localhost:8400
+  cors_origin: "*"
 
 storage:
   data_dir: ./data
